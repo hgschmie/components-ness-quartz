@@ -17,6 +17,12 @@ package com.nesscomputing.quartz;
 
 import java.util.concurrent.ConcurrentMap;
 
+import com.google.common.base.Objects;
+import com.google.common.collect.Maps;
+import com.google.inject.Inject;
+import com.google.inject.Injector;
+import com.yammer.metrics.core.MetricsRegistry;
+
 import org.quartz.Job;
 import org.quartz.JobDetail;
 import org.quartz.JobKey;
@@ -24,12 +30,6 @@ import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.spi.JobFactory;
 import org.quartz.spi.TriggerFiredBundle;
-
-import com.google.common.base.Objects;
-import com.google.common.collect.Maps;
-import com.google.inject.Inject;
-import com.google.inject.Injector;
-import com.yammer.metrics.core.MetricsRegistry;
 
 /**
  * Implementation of a Quartz JobFactory using Guice to get the jobs to run. This allows for injection on

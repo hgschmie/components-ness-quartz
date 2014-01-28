@@ -15,12 +15,12 @@
  */
 package com.nesscomputing.quartz;
 
+import com.google.inject.Singleton;
+
 import org.junit.Ignore;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
-
-import com.google.inject.Singleton;
 
 @Ignore
 @Singleton

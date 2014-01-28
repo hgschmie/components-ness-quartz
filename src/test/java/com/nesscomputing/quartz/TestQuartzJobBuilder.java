@@ -17,6 +17,8 @@ package com.nesscomputing.quartz;
 
 import java.net.URI;
 
+import com.nesscomputing.config.Config;
+
 import org.apache.commons.configuration.Configuration;
 import org.easymock.Capture;
 import org.easymock.CaptureType;
@@ -32,9 +34,6 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.quartz.Scheduler;
 import org.quartz.Trigger;
-
-import com.nesscomputing.config.Config;
-import com.nesscomputing.quartz.AdHocQuartzJob;
 
 public class TestQuartzJobBuilder extends EasyMockSupport
 {

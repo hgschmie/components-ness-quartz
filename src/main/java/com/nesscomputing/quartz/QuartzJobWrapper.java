@@ -19,13 +19,13 @@ import static java.lang.String.format;
 
 import javax.annotation.Nonnull;
 
+import com.google.common.base.Preconditions;
+
 import org.quartz.InterruptableJob;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.quartz.UnableToInterruptJobException;
-
-import com.google.common.base.Preconditions;
 
 public class QuartzJobWrapper implements InterruptableJob
 {

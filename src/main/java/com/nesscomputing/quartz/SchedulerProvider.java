@@ -17,20 +17,21 @@ package com.nesscomputing.quartz;
 
 import java.util.Set;
 
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+import com.google.inject.ProvisionException;
+import com.google.inject.name.Named;
+
+import com.nesscomputing.lifecycle.LifecycleStage;
+import com.nesscomputing.lifecycle.guice.AbstractLifecycleProvider;
+import com.nesscomputing.lifecycle.guice.LifecycleAction;
+import com.nesscomputing.logging.Log;
+
 import org.apache.commons.configuration.Configuration;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.SchedulerFactory;
 import org.quartz.spi.JobFactory;
-
-import com.google.inject.Inject;
-import com.google.inject.Provider;
-import com.google.inject.ProvisionException;
-import com.google.inject.name.Named;
-import com.nesscomputing.lifecycle.LifecycleStage;
-import com.nesscomputing.lifecycle.guice.AbstractLifecycleProvider;
-import com.nesscomputing.lifecycle.guice.LifecycleAction;
-import com.nesscomputing.logging.Log;
 
 public class SchedulerProvider extends AbstractLifecycleProvider<Scheduler> implements Provider<Scheduler>
 {

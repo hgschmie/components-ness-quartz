@@ -18,6 +18,18 @@ package com.nesscomputing.quartz;
 import java.util.Iterator;
 import java.util.Properties;
 
+import com.google.common.base.Preconditions;
+import com.google.inject.AbstractModule;
+import com.google.inject.Provides;
+import com.google.inject.Scopes;
+import com.google.inject.Singleton;
+import com.google.inject.name.Named;
+import com.google.inject.name.Names;
+
+import com.nesscomputing.config.Config;
+import com.nesscomputing.config.ConfigProvider;
+import com.nesscomputing.logging.Log;
+
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.ConfigurationConverter;
 import org.apache.commons.lang3.StringUtils;
@@ -32,17 +44,6 @@ import org.quartz.SchedulerFactory;
 import org.quartz.impl.StdSchedulerFactory;
 import org.quartz.spi.JobFactory;
 import org.skife.config.TimeSpan;
-
-import com.google.common.base.Preconditions;
-import com.google.inject.AbstractModule;
-import com.google.inject.Provides;
-import com.google.inject.Scopes;
-import com.google.inject.Singleton;
-import com.google.inject.name.Named;
-import com.google.inject.name.Names;
-import com.nesscomputing.config.Config;
-import com.nesscomputing.config.ConfigProvider;
-import com.nesscomputing.logging.Log;
 
 /**
  * Guice Module to integrate the Quartz Job scheduler. Using this module

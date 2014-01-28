@@ -15,11 +15,12 @@
  */
 package com.nesscomputing.quartz.internal;
 
+import com.google.inject.AbstractModule;
+
+import com.nesscomputing.config.Config;
+
 import org.junit.Ignore;
 import org.weakref.jmx.MBeanExporter;
-
-import com.google.inject.AbstractModule;
-import com.nesscomputing.config.Config;
 
 @Ignore
 public class TestingQuartzModule extends AbstractModule

@@ -18,6 +18,14 @@ package com.nesscomputing.quartz;
 import java.util.List;
 import java.util.Set;
 
+import com.google.common.collect.Sets;
+import com.google.inject.Inject;
+
+import com.nesscomputing.lifecycle.Lifecycle;
+import com.nesscomputing.lifecycle.LifecycleListener;
+import com.nesscomputing.lifecycle.LifecycleStage;
+import com.nesscomputing.logging.Log;
+
 import org.apache.commons.lang3.StringUtils;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobKey;
@@ -28,13 +36,6 @@ import org.quartz.TriggerKey;
 import org.weakref.jmx.JmxException;
 import org.weakref.jmx.MBeanExporter;
 import org.weakref.jmx.Managed;
-
-import com.google.common.collect.Sets;
-import com.google.inject.Inject;
-import com.nesscomputing.lifecycle.Lifecycle;
-import com.nesscomputing.lifecycle.LifecycleListener;
-import com.nesscomputing.lifecycle.LifecycleStage;
-import com.nesscomputing.logging.Log;
 
 public class QuartzJmxTrigger
 {

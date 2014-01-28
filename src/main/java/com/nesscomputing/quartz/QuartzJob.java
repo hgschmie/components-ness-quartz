@@ -25,6 +25,11 @@ import java.io.Serializable;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
+import com.google.common.base.Preconditions;
+import com.google.inject.name.Named;
+
+import com.nesscomputing.logging.Log;
+
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
@@ -40,10 +45,6 @@ import org.quartz.SimpleScheduleBuilder;
 import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
 import org.skife.config.TimeSpan;
-
-import com.google.common.base.Preconditions;
-import com.google.inject.name.Named;
-import com.nesscomputing.logging.Log;
 
 abstract class QuartzJob<SelfType extends QuartzJob<SelfType>>
 {

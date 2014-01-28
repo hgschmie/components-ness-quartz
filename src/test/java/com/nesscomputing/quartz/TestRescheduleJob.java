@@ -18,6 +18,17 @@ package com.nesscomputing.quartz;
 import java.net.URI;
 import java.util.concurrent.atomic.AtomicLong;
 
+import com.google.inject.AbstractModule;
+import com.google.inject.Guice;
+import com.google.inject.Inject;
+import com.google.inject.Injector;
+import com.google.inject.Scopes;
+
+import com.nesscomputing.config.Config;
+import com.nesscomputing.lifecycle.Lifecycle;
+import com.nesscomputing.lifecycle.LifecycleStage;
+import com.nesscomputing.lifecycle.guice.LifecycleModule;
+import com.nesscomputing.quartz.internal.TestingQuartzModule;
 
 import org.joda.time.Duration;
 import org.junit.After;
@@ -29,20 +40,6 @@ import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
-
-import com.google.inject.AbstractModule;
-import com.google.inject.Guice;
-import com.google.inject.Inject;
-import com.google.inject.Injector;
-import com.google.inject.Scopes;
-import com.nesscomputing.config.Config;
-import com.nesscomputing.lifecycle.Lifecycle;
-import com.nesscomputing.lifecycle.LifecycleStage;
-import com.nesscomputing.lifecycle.guice.LifecycleModule;
-import com.nesscomputing.quartz.AdHocQuartzJob;
-import com.nesscomputing.quartz.NessQuartzModule;
-import com.nesscomputing.quartz.RescheduledQuartzJob;
-import com.nesscomputing.quartz.internal.TestingQuartzModule;
 
 public class TestRescheduleJob
 {

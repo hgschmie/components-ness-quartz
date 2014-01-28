@@ -17,14 +17,14 @@ package com.nesscomputing.quartz;
 
 import static java.lang.String.format;
 
+import com.google.inject.Binder;
+import com.google.inject.multibindings.Multibinder;
+
 import org.joda.time.Duration;
 import org.joda.time.format.PeriodFormat;
 import org.quartz.Job;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
-
-import com.google.inject.Binder;
-import com.google.inject.multibindings.Multibinder;
 
 public class QuartzJobBinder extends QuartzJob<QuartzJobBinder>
 {

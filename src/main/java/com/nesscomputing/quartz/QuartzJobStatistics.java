@@ -17,12 +17,12 @@ package com.nesscomputing.quartz;
 
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.lang3.StringUtils;
-import org.quartz.JobKey;
-
 import com.yammer.metrics.core.MetricName;
 import com.yammer.metrics.core.MetricsRegistry;
 import com.yammer.metrics.core.Timer;
+
+import org.apache.commons.lang3.StringUtils;
+import org.quartz.JobKey;
 
 public class QuartzJobStatistics
 {
